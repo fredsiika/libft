@@ -6,3 +6,23 @@ This projects seeks to build on the concepts learned during the c piscine (bootc
 
 It incorporates very useful functions, including binary trees, linked lists, stacks, arrays, bit manipulation, and more. By developing this library, I gained a thorough understanding of data structures, algorithms, unit testing, continuous integration, troubleshooting, and proper documentation.
 
+## Getting Started
+### Compiling
+Run the following commands:
+
+- To compile
+`make`
+
+- To remove objects:
+`make clean`
+
+- To remove objects and binary file (program):
+`make fclean`
+
+- To re-compile:
+`make re`
+
+- Executing
+To test the library, compile with your program. i.e.
+
+`./program libft.a`

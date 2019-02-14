@@ -6,13 +6,13 @@
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 21:56:55 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/11 22:46:14 by fredsiik         ###   ########.fr       */
+/*   Updated: 2019/02/12 01:33:04 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FT_LIBFT_H
 
-#define ft_LIBFT_H
+#define FT_LIBFT_H
 #define BUFF_SIZE 4096
 #define BUFF_SIZE_IN 1
 #define FDS 65535

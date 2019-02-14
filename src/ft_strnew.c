@@ -5,14 +5,14 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 03:39:30 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/13 03:41:43 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/13 03:33:24 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/13 03:36:33 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char *ft_strnew(size_t size)
+char	*ft_strnew(size_t size)
 {
 	char *str;
 

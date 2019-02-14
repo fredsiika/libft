@@ -1,22 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 03:18:56 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/13 03:19:25 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/12 07:48:45 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/12 07:51:06 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char	*ft_strrchr(const char *s, int c)
 {
-	if (ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	int	i;
+	int	j;
+
+	i = ft_strlen(s);
+	j = 0;
+	while (i >= j)
+		if (s[i - j++] == c)
+			return ((char *)&s[i - (j - 1)]);
+	return (NULL);
 }

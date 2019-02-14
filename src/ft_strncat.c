@@ -1,22 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strncat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 03:18:56 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/13 03:19:25 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/12 07:22:29 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/12 07:26:51 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char *ft_strncat(char *s1, const char *s2, size_t n)
 {
-	if (ap)
+	size_t	i;
+	size_t	j;
+
+	i = 0;
+	j = 0;
+	while (s1[i])
+		i += 1;
+	while ((j < n) && s2[j])
 	{
-		free(*ap);
-		*ap = NULL;
+		s1[i + j] = s2[j];
+		j += 1;
 	}
+	s1[i + j] = '\0';
+	return (s1);
 }

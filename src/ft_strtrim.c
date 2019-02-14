@@ -1,22 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 03:18:56 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/13 03:19:25 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/13 04:21:54 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/13 04:24:55 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+char	*ft_strtrim(char const *s)
 {
-	if (ap)
-	{
-		free(*ap);
-		*ap = NULL;
-	}
+	size_t	i;
+	size_t	j;
+	char	*str;
+
+	if (!s)
+		return (NULL);
+	i = 0;
+	j = 0;
+	while (s[i] && ft_iswspace(s[i]))
+		i += 1;
+	j = ft_strlen(&s[i]) - 1;
+	while (s[i] && ft_iswspace(s[j + i]))
+		j -= 1;
+	if (!(str = ft_strnew(j + 1)))
+		return (NULL);
+	ft_strncpy(str, (s + i), (j + 1));
+	return (str);
 }

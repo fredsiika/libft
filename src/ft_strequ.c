@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memdel.c                                        :+:      :+:    :+:   */
+/*   ft_strequ.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/13 03:18:56 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/13 03:19:25 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/13 04:03:43 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/13 04:05:44 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_memdel(void **ap)
+int		ft_strequ(char const *s1, char const *s2)
 {
-	if (ap)
+	if (s1 && s2)
 	{
-		free(*ap);
-		*ap = NULL;
+		while (*s1 && (*s1 == *s2))
+		{
+			s1 += 1;
+			s2 += 1;
+		}
+		if (!(*s1 - *s2))
+			return (1);
 	}
+	return (0);
 }

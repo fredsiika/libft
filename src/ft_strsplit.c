@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcpy.c                                        :+:      :+:    :+:   */
+/*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/02/11 23:41:23 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/11 23:43:00 by fredsiik         ###   ########.fr       */
+/*   Created: 2019/02/13 04:28:32 by fredsiik          #+#    #+#             */
+/*   Updated: 2019/02/13 04:35:51 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	*ft_memcpy(void *dst, const void *src, size_t n)
+char	**ft_strsplit(char const *s, char c)
 {
 	size_t	i;
-	unsigned char *udst;
-	unsigned char *usrc;
+	size_t	j;
+	size_t	k;
+	char	**w;
 
 	i = 0;
-	udst = (unsigned char *)dst;
-	usrc = (unsigned char *)src;
-	while (i < n)
+	k = 0;
+	if (!s || !(w = (char **)malloc(sizeof(char *) * (ft_wordcount(s, c) + 1))))
+		return (NULL);
+	while (i < ft_wordcount(s, c))
 	{
-		udst[i] = usrc[i];
+		if (!(w[i] = (char *)malloc(sizeof(char) * (ft_wordlen(&s[k], c) + 1))))
+			return (NULL);
+		j = 0;
+		while (s[k] == c)
+			k += 1;
+		while (s[k] != c && s[k])
+			w[i][j++] = s[k++];
+		w[i][j] = '\0';
 		i += 1;
 	}
-	return (dst);
+	w[i] = NULL;
+	return (w);
 }

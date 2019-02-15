@@ -28,3 +28,4 @@ To test the library, compile with your program. i.e.
 `./program libft.a`
 
 ### Contributors
+Fred Siika

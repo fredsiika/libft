@@ -6,7 +6,7 @@
 #    By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/12 06:39:35 by fredsiik          #+#    #+#              #
-#    Updated: 2019/02/17 07:49:08 by fredsiik         ###   ########.fr        #
+#    Updated: 2019/02/23 23:12:02 by fredsiik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,9 +68,9 @@ SRCS		= ft_memset.c \
 
 OBJS		= $(SRCS:.c=.o)
 
-CC			= gcc
+CC		= gcc
 CFLAGS		= -Wall -Werror -Wextra
-AR			= ar rc
+AR		= ar rc
 RANLIB		= ranlib
 
 .PHONY: all, clean, fclean, re

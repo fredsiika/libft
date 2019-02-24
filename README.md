@@ -9,7 +9,7 @@ The goal of the `libft` project is to build on the concepts you learned during `
 The C Standard Library is a set of C built-in functions, constants and header files like `<stdio.h>`, `<stdlib.h>`, `<math.h>`, etc. This project has certain restrictions that prohibit the use of these standard C libraries. 
 Because we don't have access to those highly useful standard functions, we have to re-write those functions, to understand them and to learn how to use them currently. 
 
-### Objectives:
+## Objectives:
 C programming can be very tedious when one doesn’t have access to those highly useful standard functions. This project makes you to take the time to re-write those functions, understand them, and learn to use them. This library will help you for all your future C projects.
 
 Through this project, we have the opportunity to expand the list of functions with your own that will be used throughout the year. 
@@ -38,10 +38,10 @@ To test the library, compile with your program. i.e.
 
 `./program libft.a`
 
-### Known Issues
+## Known Issues
 Currently fixing compilation errors due to some missing functions.
 
-### General Instructions
+## General Instructions
 - You must create the following functions in the order you believe makes most sense. We encourage you to use the functions you have already coded to write the next ones. The difficulty level does not increase by assignment and the project has not
 been structured in any specific way. It is similar to a video game, where you can complete quests in the order of your choosing and use the loot from the previous quests to solve the next ones.
 - Your project must be written in accordance with the [Norm](https://github.com/Gegel85/norminette).
@@ -53,6 +53,11 @@ been structured in any specific way. It is similar to a video game, where you ca
 $>cat -e author
 xlogin$
 ```
+- You must submit a C file for each function you create, as well as a `libft.h` file, which will contain all the necessary prototypes as well as `macros` and `typedefs` you might need. All those files must be at the root of your repository.
+- You must submit a `Makefile` which will compile your source files to a static library `libft.a`.
+- Your `Makefile` must at least contain the rules `$(NAME)`, `all`, `clean`, `fclean` and `re` in the order that you will see fit.
+- Your `Makefile` must compile your work with the flags `-Wall, -Wextra and -Werror`.
+
 ### Contributors
 [Fred Siika](https://github.com/fredsiika/)
 

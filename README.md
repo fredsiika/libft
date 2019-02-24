@@ -41,6 +41,14 @@ To test the library, compile with your program. i.e.
 ### Known Issues
 Currently fixing compilation errors due to some missing functions.
 
+### General Instructions
+- You must create the following functions in the order you believe makes most sense. We encourage you to use the functions you have already coded to write the next ones. The difficulty level does not increase by assignment and the project has not
+been structured in any specific way. It is similar to a video game, where you can complete quests in the order of your choosing and use the loot from the previous quests to solve the next ones.
+- Your project must be written in accordance with the [Norm](https://github.com/Gegel85/norminette).
+- Your functions should not quit unexpectedly (segmentation fault, bus error, double free, etc) apart from undefined behaviors. If this happens, your project will be considered non functional and will receive a 0 during the defence.
+- All heap allocated memory space must be properly freed when necessary.
+- You must submit a file named author containing your username followed by a `’\n'` at the root of your repository,
+
 ### Contributors
 [Fred Siika](https://github.com/fredsiika/)
 

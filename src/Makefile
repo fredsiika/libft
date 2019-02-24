@@ -6,7 +6,7 @@
 #    By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/12 06:39:35 by fredsiik          #+#    #+#              #
-#    Updated: 2019/02/23 23:12:02 by fredsiik         ###   ########.fr        #
+#    Updated: 2019/02/23 23:58:15 by fredsiik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -66,20 +66,23 @@ SRCS		= ft_memset.c \
 			  ft_putnbr_fd.c \
 
 
-OBJS		= $(SRCS:.c=.o)
+OBJS		= $(SRCS:%.c=%.o)
 
-CC		= gcc
-CFLAGS		= -Wall -Werror -Wextra
-AR		= ar rc
+CC			= gcc
+CFLAGS		= -Wall -Werror -Wextra -c
+AR			= ar rcs
 RANLIB		= ranlib
 
 .PHONY: all, clean, fclean, re
 
-all:
-	@$(CC) $(CFLAGS) -c $(SRCS)
-	@$(AR) $(NAME) $(OBJS)
-	@$(RANLIB) $(NAME)
+all: $(NAME)
 	@echo "[$(NAME)] Library created!"
+
+$(NAME): $(OBJS)
+	$(AR) $(NAME) $(OBJS)
+
+$(OBJS): $(SRCS)
+	$(CC) $(CFLAGS) $(SRCS)
 
 clean:
 	@rm -rfv $(OBJS)

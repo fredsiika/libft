@@ -57,6 +57,9 @@ xlogin$
 - You must submit a `Makefile` which will compile your source files to a static library `libft.a`.
 - Your `Makefile` must at least contain the rules `$(NAME)`, `all`, `clean`, `fclean` and `re` in the order that you will see fit.
 - Your `Makefile` must compile your work with the flags `-Wall, -Wextra and -Werror`.
+- Only the following libc functions are allowed : `malloc(3)`, `free(3)` and `write(2)`, and their usage is restricted. See below.
+- You must include the necessary include system files to use one or more of the three authorized functions in your `.c files`. The only additional system include file you are allowed to use is `string.h` to have access to the constant `NULL` and to the type `size_t`. Everything else if forbidden.
+- We encourage you to create test programs for your library even though this work **won’t have to be submitted and won’t be graded.** It will give you a chance to easily test your work and your peers’ work. You will find those tests especially useful during your defence. Indeed, during defence, you are free to use your tests and/or the tests of the peer you are evaluating.
 
 ### Contributors
 [Fred Siika](https://github.com/fredsiika/)

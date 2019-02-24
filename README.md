@@ -27,5 +27,8 @@ To test the library, compile with your program. i.e.
 
 `./program libft.a`
 
+### Known Issues
+Currently fixing compilation errors due to some missing functions.
+
 ### Contributors
 Fred Siika

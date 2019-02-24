@@ -1,5 +1,5 @@
 # Libft
-Open source C library functions specific for [42 Silicon Valley](https://www.42.us.org/).
+Open source C library functions specific for 42 Silicon Valley.
 
 ## About Libft
 This first project marks the beginning of your training at [42 Silicon Valley](https://www.42.us.org/) to become de software engineer.

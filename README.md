@@ -49,6 +49,10 @@ been structured in any specific way. It is similar to a video game, where you ca
 - All heap allocated memory space must be properly freed when necessary.
 - You must submit a file named author containing your username followed by a `’\n'` at the root of your repository,
 
+```c
+$>cat -e author
+xlogin$
+```
 ### Contributors
 [Fred Siika](https://github.com/fredsiika/)
 

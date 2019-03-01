@@ -6,7 +6,7 @@
 #    By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/02/12 06:39:35 by fredsiik          #+#    #+#              #
-#    Updated: 2019/02/23 23:58:15 by fredsiik         ###   ########.fr        #
+#    Updated: 2019/02/24 01:31:22 by fredsiik         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -69,20 +69,21 @@ SRCS		= ft_memset.c \
 OBJS		= $(SRCS:%.c=%.o)
 
 CC			= gcc
-CFLAGS		= -Wall -Werror -Wextra -c
+CFLAGS		= -Wall -Werror -Wextra
 AR			= ar rcs
 RANLIB		= ranlib
 
 .PHONY: all, clean, fclean, re
 
 all: $(NAME)
-	@echo "[$(NAME)] Library created!"
 
 $(NAME): $(OBJS)
 	$(AR) $(NAME) $(OBJS)
+	@$(RANLIB) $(NAME)
+	@echo "[INFO] Library [$(NAME)] created!"
 
 $(OBJS): $(SRCS)
-	$(CC) $(CFLAGS) $(SRCS)
+	$(CC) $(CFLAGS) -c $(SRCS)
 
 clean:
 	@rm -rfv $(OBJS)

@@ -6,7 +6,7 @@
 /*   By: fredsiik <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/11 21:56:55 by fredsiik          #+#    #+#             */
-/*   Updated: 2019/02/12 01:33:04 by fredsiik         ###   ########.fr       */
+/*   Updated: 2019/02/28 22:37:46 by fredsiik         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,8 @@ enum	e_lengths
 };
 
 void			ft_putchar(char c);
-size_t			ft_strlen(char *str);
-int			ft_strcmp(char *str1, char *str2);
+size_t			ft_strlen(const char *str);
+int			ft_strcmp(const char *str1, const char *str2);
 int			ft_toupper(int c);
 int			ft_tolower(int c);
 int			ft_isprint(int c);
@@ -73,9 +73,11 @@ int			ft_isascii(int c);
 int			ft_isalnum(int c);
 int			ft_isdigit(int c);
 int			ft_isalpha(int c);
+int			ft_isspace(int c);
 int			ft_atoi(const char *str);
+
 char			*ft_strcpy(char *dst, const char *src);
-char			ft_strdup(const char *s1);
+char			*ft_strdup(const char *s1);
 int			ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strncpy(char *dst, const char *src, size_t len);
 char			*ft_strcat(char *s1, const char *s2);
@@ -85,7 +87,7 @@ char			*ft_strnstr(const char *hs, const char *ned, size_t len);
 void			ft_bzero(void *s, size_t n);
 void			*ft_memset(void *s, int c, size_t len);
 void			*ft_memcpy(void *dst, const void *src, size_t n);
-void			*ft_memccpy(void *dst, const void *src, size_t n);
+void			*ft_memccpy(void *dst, const void *src, int c, size_t n);
 void			*ft_memmove(void *dst, const void *src, size_t len);
 void			*ft_memchr(const void *s, int c, size_t n);
 int			ft_memcmp(const void *s1, const void *s2, size_t n);
@@ -95,5 +97,11 @@ size_t			ft_strlcat(char *dst, const char *src, size_t dstsize);
 void			ft_putchar(char c);
 void			ft_putstr(char const *s);
 void			*ft_memalloc(size_t size);
+
+/*
+ * Bonus functions
+*/
+
+t_list				*ft_lstnew(void const *content, size_t content_size);
 
 #endif
